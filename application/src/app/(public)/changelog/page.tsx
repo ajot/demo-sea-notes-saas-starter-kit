@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Chip, Typography, Divider } from '@mui/material';
+import { Box, Card, CardContent, Chip, Typography } from '@mui/material';
 
 interface ChangelogEntry {
   version: string;
@@ -55,6 +55,9 @@ const changelog: ChangelogEntry[] = [
   },
 ];
 
+/**
+ * Changelog page component that displays version history and updates
+ */
 export default function ChangelogPage() {
   return (
     <Box
@@ -72,7 +75,7 @@ export default function ChangelogPage() {
         Stay up to date with the latest features and improvements
       </Typography>
 
-      {changelog.map((entry, index) => (
+      {changelog.map((entry) => (
         <Card key={entry.version} elevation={2} sx={{ mb: 4 }}>
           <CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
